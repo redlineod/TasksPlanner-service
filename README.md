@@ -43,4 +43,28 @@ It’s suitable for personal productivity, team task management, or as a backend
 - `POST /api/tasklists/{taskListId}/tasks` — Create a new task in a specific task list  
 - `GET /api/tasklists/{taskListId}/tasks/{taskId}` — Get details of a specific task  
 - `PUT /api/tasklists/{taskListId}/tasks/{taskId}` — Update a specific task  
-- `DELETE /api/tasklists/{taskListId}/tasks/{taskId}` — Delete a specific task  
+- `DELETE /api/tasklists/{taskListId}/tasks/{taskId}` — Delete a specific task
+
+## Data Model
+
+### TaskList
+| Field       | Type           | Description                        |
+|-------------|---------------|------------------------------------|
+| `id`        | UUID           | Unique identifier                  |
+| `title`     | String         | Task list title                    |
+| `description` | String       | Description (optional)             |
+| `created`   | LocalDateTime  | Date of creation                   |
+| `updated`   | LocalDateTime  | Date of last update                |
+
+### Task
+| Field       | Type           | Description                        |
+|-------------|---------------|------------------------------------|
+| `id`        | UUID           | Unique identifier                  |
+| `title`     | String         | Task title                         |
+| `description` | String       | Description (optional)             |
+| `dueDate`   | LocalDateTime  | Due date (optional)                |
+| `status`    | Enum (OPEN, COMPLETED, ...) | Task status           |
+| `priority`  | Enum (LOW, MEDIUM, HIGH)    | Task priority        |
+| `taskList`  | TaskList       | Reference to the related task list |
+| `created`   | LocalDateTime  | Date of creation                   |
+| `updated`   | LocalDateTime  | Date of last update                |
