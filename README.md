@@ -28,3 +28,19 @@ It’s suitable for personal productivity, team task management, or as a backend
 - Spring Boot  
 - PostgreSQL  
 - Docker  
+
+## Available REST API Endpoints
+
+### Task Lists
+- `GET /api/tasklists` — Retrieve all task lists  
+- `POST /api/tasklists` — Create a new task list  
+- `GET /api/tasklists/{taskListId}` — Get details of a specific task list  
+- `PUT /api/tasklists/{taskListId}` — Update a task list  
+- `DELETE /api/tasklists/{taskListId}` — Delete a task list  
+
+### Tasks
+- `GET /api/tasklists/{taskListId}/tasks` — Retrieve all tasks in a specific task list  
+- `POST /api/tasklists/{taskListId}/tasks` — Create a new task in a specific task list  
+- `GET /api/tasklists/{taskListId}/tasks/{taskId}` — Get details of a specific task  
+- `PUT /api/tasklists/{taskListId}/tasks/{taskId}` — Update a specific task  
+- `DELETE /api/tasklists/{taskListId}/tasks/{taskId}` — Delete a specific task  
