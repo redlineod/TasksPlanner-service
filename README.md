@@ -2,6 +2,20 @@
 
 A Spring Boot RESTful API for managing tasks and task lists.  
 
+## Overview
+This application is a backend API for managing tasks and task lists.  
+It allows users to:
+- Create, read, update, and delete task lists  
+- Add tasks to specific lists  
+- Set task priorities (e.g., low, medium, high) and statuses (e.g., open, completed)  
+- Assign due dates and descriptions to tasks  
+- Retrieve all tasks in a list or a specific task by ID  
+- Update task details and status  
+- Delete tasks from a list  
+
+The app uses **PostgreSQL** for data storage, supports **validation** and **error handling**, and is ready for deployment with **Docker**.  
+It’s suitable for personal productivity, team task management, or as a backend for a to-do application.  
+
 ## Features
 - CRUD operations for tasks and task lists  
 - Task priorities and statuses  
@@ -10,6 +24,7 @@ A Spring Boot RESTful API for managing tasks and task lists.
 - Docker support for easy deployment  
 
 ## Tech Stack
-- Java
-- Spring Boot
-- PostgreSQL
+- Java  
+- Spring Boot  
+- PostgreSQL  
+- Docker  
