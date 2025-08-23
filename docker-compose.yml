@@ -1,0 +1,13 @@
+services:
+  db:
+    # Use the latest official PostgreSQL image
+    image: postgres:latest
+    # Set the database password (change in production!)
+    environment:
+      POSTGRES_PASSWORD: changemeinprod!
+      TZ: Europe/Kyiv
+    # Map port 5432 on host to 5432 on container
+    ports:
+      - "5432:5432"
+    # Always restart the container unless explicitly stopped
+    restart: always
