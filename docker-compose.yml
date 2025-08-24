@@ -11,3 +11,15 @@ services:
       - "5432:5432"
     # Always restart the container unless explicitly stopped
     restart: always
+
+  app:
+    build: .
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/postgres
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: changemeinprod!
+    ports:
+      - "8080:8080"
+    restart: always

@@ -137,69 +137,27 @@ public class Task {
 
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((id == null) ? 0 : id.hashCode());
-        result = prime * result + ((title == null) ? 0 : title.hashCode());
-        result = prime * result + ((description == null) ? 0 : description.hashCode());
-        result = prime * result + ((dueDate == null) ? 0 : dueDate.hashCode());
-        result = prime * result + ((status == null) ? 0 : status.hashCode());
-        result = prime * result + ((priority == null) ? 0 : priority.hashCode());
-        result = prime * result + ((taskList == null) ? 0 : taskList.hashCode());
-        result = prime * result + ((created == null) ? 0 : created.hashCode());
-        result = prime * result + ((updated == null) ? 0 : updated.hashCode());
-        return result;
+        return java.util.Objects.hash(
+            id, title, description, dueDate, status, priority, taskList, created, updated
+        );
     }
 
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
             return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
+        if (obj == null || getClass() != obj.getClass())
             return false;
         Task other = (Task) obj;
-        if (id == null) {
-            if (other.id != null)
-                return false;
-        } else if (!id.equals(other.id))
-            return false;
-        if (title == null) {
-            if (other.title != null)
-                return false;
-        } else if (!title.equals(other.title))
-            return false;
-        if (description == null) {
-            if (other.description != null)
-                return false;
-        } else if (!description.equals(other.description))
-            return false;
-        if (dueDate == null) {
-            if (other.dueDate != null)
-                return false;
-        } else if (!dueDate.equals(other.dueDate))
-            return false;
-        if (status != other.status)
-            return false;
-        if (priority != other.priority)
-            return false;
-        if (taskList == null) {
-            if (other.taskList != null)
-                return false;
-        } else if (!taskList.equals(other.taskList))
-            return false;
-        if (created == null) {
-            if (other.created != null)
-                return false;
-        } else if (!created.equals(other.created))
-            return false;
-        if (updated == null) {
-            if (other.updated != null)
-                return false;
-        } else if (!updated.equals(other.updated))
-            return false;
-        return true;
+        return java.util.Objects.equals(id, other.id)
+                && java.util.Objects.equals(title, other.title)
+                && java.util.Objects.equals(description, other.description)
+                && java.util.Objects.equals(dueDate, other.dueDate)
+                && status == other.status
+                && priority == other.priority
+                && java.util.Objects.equals(taskList, other.taskList)
+                && java.util.Objects.equals(created, other.created)
+                && java.util.Objects.equals(updated, other.updated);
     }
 
     @Override

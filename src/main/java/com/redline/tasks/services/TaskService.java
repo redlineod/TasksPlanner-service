@@ -6,8 +6,6 @@ import java.util.UUID;
 
 import com.redline.tasks.domain.entities.Task;
 
-import jakarta.transaction.Transactional;
-
 public interface TaskService {
     List<Task> listTasks(UUID taskListId);
     Task createTask(UUID taskListId, Task task);
